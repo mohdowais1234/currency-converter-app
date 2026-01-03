@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currency Converter</title>
+  <style>
+    /* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+  background: darkslategrey;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card container */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Heading */
+.card h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Inputs and selects */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: rgb(115, 168, 185);
+  outline: none;
+  width: 100%;
+}
+
+
+
+/* Button */
+button {
+  background: #333;
+  color: #fff;              /* white text */
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100% ;              /* full width */
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #555;          /* hover effect */
+}
+
+
+
+
+
+/* Result section */
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.muted {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Responsive layout */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 600px) {
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row div {
+    flex: 1;
+  }
+
+  button {
+    width: auto;
+    
+    align-items: center;
+  }
+  #covertBtn {
+    align-items: center;
+    text-align: center;
+   
+
+  }
+}
+
+
+  </style>
+</head>
+<body align="center">
+  <div class="card">
+    <h1>Currency Converter</h1>
+    <br>
+    <div class="row">
+      <div>
+        <label for="amount" class="muted">Amount</label>
+        <input id="amount" type="number" placeholder="Enter amount" value="1" min="0" step="0.01" />
+      </div>
+      <br>
+      <br>
+      <div>
+        <label for="from" class="muted">From</label>
+        <select id="from"></select>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="to" class="muted">To</label>
+        <select id="to"></select>
+      </div>
+    </div>
+      <br>
+      <button id="convertBtn">Convert</button>
+    
+    <div class="result" id="result">Result will appear here</div>
+    <div class="muted" id="rateInfo"></div>
+  </div>
+ 
+
+<script src="script.js"></script> 
+    
+</body>
+</html>
+
+
+
+ 
